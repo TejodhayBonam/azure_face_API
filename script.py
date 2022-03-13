@@ -11,7 +11,7 @@ Environment Information:
 	-- threading (for multi-threading)
 
 '''
-
+from flask import Flask, render_template, Response
 import cv2
 import time
 from azure.cognitiveservices.vision.face import FaceClient
@@ -22,6 +22,8 @@ import threading
 subscription_key="14769ccb9806491da326497ae86174ce"
 endpoint="https://livefaceemotions.cognitiveservices.azure.com/"
 face_client=FaceClient(endpoint, CognitiveServicesCredentials(subscription_key))
+
+app = Flask(__name__)
 
 class FaceDetector(threading.Thread):
 	'''
@@ -183,3 +185,18 @@ detector.start()
 time.sleep(0.5)
 # Start the face detector function
 detector.detector()
+
+
+@app.route('/video_feed')
+def video_feed():
+    #Video streaming route. Put this in the src attribute of an img tag
+    return Response(run(self), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
