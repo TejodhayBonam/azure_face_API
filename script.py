@@ -1,6 +1,6 @@
 '''
 Face Detection using Azure Cognitive Services
-Demonstration link - https://youtu.be/e0xqMmpjYL8
+
 
 Environment Information:
 -----------------------
