@@ -28,10 +28,10 @@ pip install <package-name>
 ```
 
 * Start a terminal (Ctrl + Alt + T on Ubuntu).
-* Clone this repository and navigate to `face-detection-azure/`.
+* Clone this repository 
 
 ```
-git clone https://github.com/ioarun/face-detection-azure.git
+git clone https://github.com/TejodhayBonam/azure_face_API.git
 cd face-detection-azure/
 ```
 
