@@ -192,7 +192,7 @@ detector.detector()
 @app.route('/video_feed')
 def video_feed():
     #Video streaming route. Put this in the src attribute of an img tag
-    return Response(run(self), mimetype='multipart/x-mixed-replace; boundary=frame')
+    return Response(FaceDetector(1, "Face Detection - Azure"), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
 @app.route('/')
