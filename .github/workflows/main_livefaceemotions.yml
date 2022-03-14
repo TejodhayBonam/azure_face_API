@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'livefaceemotions'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8D3DFB041CEF4541B367B8BBF2D83052 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DE81BB3AB8F64080AD4D76F58A358394 }}
