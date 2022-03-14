@@ -11,7 +11,7 @@ Environment Information:
 	-- threading (for multi-threading)
 
 '''
-
+from flask import Flask, render_template, Response
 import cv2
 import time
 from azure.cognitiveservices.vision.face import FaceClient
@@ -19,7 +19,7 @@ from msrest.authentication import CognitiveServicesCredentials
 
 import threading
 
-
+app = Flask(__name__)
 
 subscription_key="14769ccb9806491da326497ae86174ce"
 endpoint="https://livefaceemotions.cognitiveservices.azure.com/"
@@ -189,7 +189,13 @@ time.sleep(0.5)
 detector.detector()
 
 
+@app.route('/')
+def index():
+    return render_template('index.html')
 
+
+if __name__ == '__main__':
+    app.run(debug=True)
 
 
 
