@@ -32,13 +32,13 @@ pip install <package-name>
 
 ```
 git clone https://github.com/TejodhayBonam/azure_face_API.git
-cd face-detection-azure/
+cd 
 ```
 
-* Run `script.py`.
+* Run `app.py`.
 
 ```
-python script.py
+python app.py
 ```
 
 
